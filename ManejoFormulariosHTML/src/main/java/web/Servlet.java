@@ -33,7 +33,7 @@ public class Servlet extends HttpServlet {
             out.println("<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB\" crossorigin=\"anonymous\">\n" +
 "");
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body class='container mt-5'>");
             out.println("<h1 class='mb-4 text-center text-warning'>Parámetros procesados por el Servlet</h1>");
             out.println("<table class='table table-bordered table-striped'>");
             out.println("<tr><th>Usuario</th><td>" + usuario + "</td></tr>");
