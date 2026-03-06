@@ -37,6 +37,18 @@ public class Servlet extends HttpServlet {
             out.println("<h1 class='mb-4 text-center text-warning'>Parámetros procesados por el Servlet</h1>");
             out.println("<table class='table table-bordered table-striped'>");
             out.println("<tr><th>Usuario</th><td>" + usuario + "</td></tr>");
+            out.println("<tr><th>Password</th><td>" + password + "</td></tr>");
+            out.println("<tr><th>Tecnologias</th><td>");
+            if (tecnologias != null) {
+                out.println(String.join(" / ", tecnologias));
+            } else {
+                out.println("Tecnologías no proporcionadas");
+            }
+            out.println("</td></tr>");
+            out.println("<tr><th>Genero</th><td>" + genero + "</td></tr>");
+            out.println("<tr><th>Ocupación</th><td>" + ocupacion + "</td></tr>");
+            out.println("<tr><th>Comentarios</th><td>" + comentarios + "</td></tr>");
+            out.println("<tr><th>Valor Oculto</th><td>" + valorOculto + "</td></tr>");
             out.println("</table>");
             out.println("<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI\" crossorigin=\"anonymous\"></script>\n" +
 "");
