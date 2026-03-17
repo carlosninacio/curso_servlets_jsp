@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.Enumeration;
 
 @WebServlet(name = "ServletCabeceros", urlPatterns = {"/ServletCabeceros"})
 public class ServletCabeceros extends HttpServlet {
@@ -29,6 +30,15 @@ public class ServletCabeceros extends HttpServlet {
             out.println("Método Http: " + metodoHttp);
             out.println("<br>");
             out.println("Uri solicitada: " + request.getRequestURI());
+            out.println("<br>");
+            out.println("<br>");
+            Enumeration<String> cabeceros = request.getHeaderNames();
+            while(cabeceros.hasMoreElements()) {
+                String nombreCabecero = cabeceros.nextElement();
+                out.println("<b>" + nombreCabecero + "</b>: ");
+                out.println(request.getHeader(nombreCabecero));
+                out.println("<br>");
+            }
             out.println("</body>");
             out.println("</html>");
         }
