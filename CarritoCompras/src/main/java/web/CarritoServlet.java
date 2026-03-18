@@ -43,10 +43,17 @@ public class CarritoServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CarritoServlet</title>");
+            out.println("<title>Carrito Compras</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet CarritoServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Lista de Articulos</h1>");
+            out.println("<br/><ul>");
+            // Iteramos sobre la lista de artículos
+            for(String articulo: articulos) {
+                out.println("<li>" + articulo + "</li>");
+            }
+            out.println("</ul><br/>");
+            out.println("<a href='/CarritoCompras'>Regresar al Inicio</a>");
             out.println("</body>");
             out.println("</html>");
         }
