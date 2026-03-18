@@ -31,6 +31,9 @@ public class SesionesServlet extends HttpServlet {
             titulo = "Bienvenido nuevamente";
         }
         
+        // Guardar el valor actualizado en la sesión
+        sesion.setAttribute("contadorVisitas", contadorVisitas);
+        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
