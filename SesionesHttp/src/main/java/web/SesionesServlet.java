@@ -36,10 +36,13 @@ public class SesionesServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SesionesServlet</title>");
+            out.println("<title>Sesiones Http</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SesionesServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>" + titulo + "</h1>");
+            out.println("<p>Número de accesos: " + contadorVisitas + "</p>");
+            out.println("<p>ID de la sesión: " + sesion.getId() + "</p>");
+            out.println("<a href='/SesionesHttp/index.html'>Volver al Inicio</a>");
             out.println("</body>");
             out.println("</html>");
         }
