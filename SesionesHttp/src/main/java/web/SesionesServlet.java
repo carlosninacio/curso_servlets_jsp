@@ -18,6 +18,18 @@ public class SesionesServlet extends HttpServlet {
         // Obtener el objeto session
         HttpSession sesion = request.getSession(); // Es una Cookie que se genera de manera automatica
         
+        // Atributos de la sesión
+        String titulo;
+        Integer contadorVisitas = (Integer) sesion.getAttribute("contadorVisitas");
+        
+        // Validar si es la primera vez que se accede a la sesión
+        if(contadorVisitas == null) {
+            contadorVisitas = 1; // Primera vez
+            titulo = "Bienvenido por primera vez";
+        } else {
+            contadorVisitas++; // Incrementar contador en visitas posteriores
+            titulo = "Bienvenido nuevamente";
+        }
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
