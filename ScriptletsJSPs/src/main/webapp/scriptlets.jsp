@@ -11,5 +11,11 @@
         <% 
             out.println("Saludos desde un Scriptlet");
         %>
+        <br/>
+        <!--Scriptlet para acceder a los objetos implicitos-->
+        <% 
+            String nombreAplicacion = request.getContextPath();
+            out.println("Nombre de la aplicación: " + nombreAplicacion);
+        %>
     </body>
 </html>
