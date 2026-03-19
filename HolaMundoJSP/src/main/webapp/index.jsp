@@ -12,7 +12,9 @@
 <!--            Lo que se coloque dentro de los scriptlets es para colocar codigo java-->
             <li> <% out.println("Hola Mundo con Scriptlets"); %> </li>
 <!--            Expression Languages (EL)-->
-            <li>${"Hola Mundo con Expresiones"}</li>
+            <li>${"Hola Mundo con Expresion Languages"}</li>
+            <!--Expressions-->
+            <li><%="Hola Mundo con Expresiones"%></li>
         </ul>
     </body>
 </html>
