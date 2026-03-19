@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,11 +8,11 @@
     </head>
     <body>
         <h1>Hola Mundo JSPs</h1>
-<!--        Los JSP se traducen a Servlet, por eso se puede incluir codigo Java-->
+            <!--Los JSP se traducen a Servlet, por eso se puede incluir codigo Java-->
         <ul>
-<!--            Lo que se coloque dentro de los scriptlets es para colocar codigo java-->
+            <!--Lo que se coloque dentro de los scriptlets es para colocar codigo java-->
             <li> <% out.println("Hola Mundo con Scriptlets"); %> </li>
-<!--            Expression Languages (EL)-->
+            <!--Expression Languages (EL)-->
             <li>${"Hola Mundo con Expresion Languages"}</li>
             <!--Expressions-->
             <li><%="Hola Mundo con Expresiones"%></li>
