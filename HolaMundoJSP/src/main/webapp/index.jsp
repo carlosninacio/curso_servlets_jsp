@@ -8,7 +8,7 @@
     <body>
         <h1>Hola Mundo JSPs</h1>
         <ul>
-            // Lo que se coloque dentro de los scriptlets es para colocar codigo java
+<!--            Lo que se coloque dentro de los scriptlets es para colocar codigo java-->
             <li> <% out.println("Hola Mundo con Scriptlets"); %> </li>
         </ul>
     </body>
