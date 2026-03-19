@@ -7,9 +7,12 @@
     </head>
     <body>
         <h1>Hola Mundo JSPs</h1>
+<!--        Los JSP se traducen a Servlet, por eso se puede incluir codigo Java-->
         <ul>
 <!--            Lo que se coloque dentro de los scriptlets es para colocar codigo java-->
             <li> <% out.println("Hola Mundo con Scriptlets"); %> </li>
+<!--            Expression Languages (EL)-->
+            <li>${"Hola Mundo con Expresiones"}</li>
         </ul>
     </body>
 </html>
