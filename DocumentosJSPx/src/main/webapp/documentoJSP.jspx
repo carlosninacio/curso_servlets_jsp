@@ -26,6 +26,9 @@
                 String nombreAplicacion = request.getContextPath();
             </jsp:scriptlet>
             Nombre de la aplicación: <jsp:expression>nombreAplicacion</jsp:expression>
+            <br/>
+            Contador de Visitas:
+            <jsp:expression>this.contadorVisitas++</jsp:expression>
         </body>
     </html>
 
