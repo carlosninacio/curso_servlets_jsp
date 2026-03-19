@@ -17,5 +17,20 @@
             String nombreAplicacion = request.getContextPath();
             out.println("Nombre de la aplicación: " + nombreAplicacion);
         %>
+        <br/>
+        <!--Scriptlet con codigo condicionado-->
+        <%
+            if(session != null && session.isNew()) {
+        %>
+        la sesión SI es nueva
+        <%
+            } else if(session != null ){
+        %>
+        la sesión no es nueva
+        <%
+            }
+        %>
+        <br/>
+        <a href="index.html">Regresar al Inicio</a>
     </body>
 </html>
