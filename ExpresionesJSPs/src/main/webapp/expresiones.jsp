@@ -12,5 +12,7 @@
         Operación Matemática: <%= 2 * 3 / 2 %>
         <br/>
         Id de la sesión: <%= session.getId() %>
+        <br/><br/>
+        <a href="index.html">Regresar al inicio</a>
     </body>
 </html>
