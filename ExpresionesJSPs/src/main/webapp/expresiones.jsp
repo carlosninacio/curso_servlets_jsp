@@ -10,5 +10,7 @@
         Concatenación: <%= "Saludos" + " " + "desde un JSP" %>
         <br/>
         Operación Matemática: <%= 2 * 3 / 2 %>
+        <br/>
+        Id de la sesión: <%= session.getId() %>
     </body>
 </html>
