@@ -16,6 +16,8 @@
             <li>${"Hola Mundo con Expresion Languages"}</li>
             <!--Expressions-->
             <li><%="Hola Mundo con Expresiones"%></li>
+            <!--JSTL-->
+            <li><c:out value="Hola Mundo con JSTL"/></li>
         </ul>
     </body>
 </html>
