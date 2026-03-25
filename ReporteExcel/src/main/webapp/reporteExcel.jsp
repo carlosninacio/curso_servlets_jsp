@@ -1,3 +1,4 @@
+<%@page errorPage = "/WEB-INF/manejoErrores.jsp" %>
 <%@page import="utilerias.Conversiones, java.util.Date"%>
 <%@page contentType="application/vnd.ms-excel;charset=UTF-8"%>
 <%
@@ -22,7 +23,7 @@
             <tr>
                 <td>1. Fundamentos de Java</td>
                 <td>Aprenderemos la sintaxis básica de Java</td>
-                <td><%= Conversiones.format(new Date())%></td>
+                <td><%= Conversiones.format("500")%></td>
             </tr>
             <tr>
                 <td>2. Programación con Java</td>
