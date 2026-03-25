@@ -23,7 +23,7 @@
             <tr>
                 <td>1. Fundamentos de Java</td>
                 <td>Aprenderemos la sintaxis básica de Java</td>
-                <td><%= Conversiones.format("500")%></td>
+                <td><%= Conversiones.format(new Date())%></td>
             </tr>
             <tr>
                 <td>2. Programación con Java</td>
