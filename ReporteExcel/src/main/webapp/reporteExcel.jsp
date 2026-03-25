@@ -3,7 +3,7 @@
 <%@page contentType="application/vnd.ms-excel;charset=UTF-8"%>
 <%
     String nombreArchivo = "reporte.xls";
-    response.setHeader("Content-Disposition", "attachment;filename=" + nombreArchivo);
+    response.setHeader("Content-Disposition", "inline;filename=" + nombreArchivo);
 %>
 
 <!DOCTYPE html>
