@@ -9,6 +9,7 @@
         <br/>
         <ul>
             <li><%@include file="paginas/noticias1.html"%></li>
+            <li><%@include file="paginas/noticias2.jsp"%></li>
         </ul>
     </body>
 </html>
