@@ -1,17 +1,25 @@
-<%-- 
-    Document   : setterJsp
-    Created on : 8/04/2026, 7:36:40 p. m.
-    Author     : Nacho
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>JSP que modifica un JavaBean</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>JSP que modifica un JavaBean</h1>
+        <jsp:useBean id="rectangulo" class="beans.Rectangulo" scope="session"/>
+        Modificamos los atributos:
+        <br/>
+        <% 
+            int baseValor = 5;
+            int alturaValor = 10;
+        %>
+        <jsp:setProperty name="rectangulo" property="base" value="<%=baseValor%>"/>
+        <jsp:setProperty name="rectangulo" property="altura" value="<%=alturaValor%>"/>
+        <br/>
+        Nuevo valor base: <%=baseValor%>
+        <br/>
+        Nuevo valor altura: <%=alturaValor%>
+        <br/>
+        <a href="index.jsp">Regresar al Inicio</a>
     </body>
 </html>
