@@ -38,12 +38,11 @@ public class ServletControlador extends HttpServlet {
             
             // Agregar mensaje
             request.setAttribute("mensaje", "Las variables fueron agregadas");
+            
+            // 4. Redireccionar al JSP de Index
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
-        
-        // 4. Redireccionar a la vista seleccionada
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("vistas/desplegarVariables.jsp");
-        requestDispatcher.forward(request, response);
-        
+
     }
 
     @Override
