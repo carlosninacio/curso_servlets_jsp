@@ -6,5 +6,7 @@
     </head>
     <body>
         <h1>Ejemplo JSTL</h1>
+        <br/>
+        <a href="jstlcore.jsp?opcion=1">Ir al JSP de JSTL core</a>
     </body>
 </html>
