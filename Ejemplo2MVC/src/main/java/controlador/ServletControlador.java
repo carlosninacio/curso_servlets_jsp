@@ -1,6 +1,7 @@
 package controlador;
 
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -25,10 +26,19 @@ public class ServletControlador extends HttpServlet {
         Rectangulo rectanguloApplication = new Rectangulo(5,6);
     
         // 3. Agregar el JavaBean a algún alcance (request, session, application)
-        request.setAttribute("mensaje", "Saludos desde el Servlet");
-        
-        HttpSession sesion = request.getSession();
-        sesion.setAttribute("rectangulo", rectangulo); // Se comparte el modelo
+        if("agregarVariables".equals(accion)) {
+            // Alcance request
+            request.setAttribute("rectanguloRequest", rectanguloRequest);
+            // Alcance session
+            HttpSession sesion = request.getSession();
+            sesion.setAttribute("rectanguloSession", rectanguloSession); // Se comparte el modelo
+            // Alcance application
+            ServletContext application = this.getServletContext();
+            application.setAttribute("rectanguloApplication", rectanguloApplication);
+            
+            // Agregar mensaje
+            request.setAttribute("mensaje", "Las variables fueron agregadas");
+        }
         
         // 4. Redireccionar a la vista seleccionada
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("vistas/desplegarVariables.jsp");
