@@ -22,5 +22,7 @@
         Base: ${rectanguloApplication.base}
         Altura: ${rectanguloApplication.altura}
         Area: ${rectanguloApplication.area}
+        <br/><br/>
+        <a href="${pageContext.request.contextPath}/index.jsp">Regresar al Inicio</a>
     </body>
 </html>
