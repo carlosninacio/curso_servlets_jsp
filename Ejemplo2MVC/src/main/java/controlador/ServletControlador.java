@@ -44,6 +44,10 @@ public class ServletControlador extends HttpServlet {
         } else if("listarVariables".equals(accion)) {
             // Redirigir al JSP que despliega las variables
             request.getRequestDispatcher("WEB-INF/alcanceVariables.jsp").forward(request, response);
+        } else {
+            // Redirige a la página de inicio
+            request.setAttribute("mensaje", "Acción no proporcionada o desconocida");
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
 
     }
