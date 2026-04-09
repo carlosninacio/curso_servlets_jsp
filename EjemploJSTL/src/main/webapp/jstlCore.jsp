@@ -10,5 +10,9 @@
         <!--Manipulación de Variables-->
         <c:set var="nombre" value="Ernesto"/>
         Variable nombre: <c:out value="${nombre}" />
+        <br/>
+        
+        <!--Variable con código HTML-->
+        <c:out value="<h4>Hola</h4>" escapeXml="false"/>
     </body>
 </html>
