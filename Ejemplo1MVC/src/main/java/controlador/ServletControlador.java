@@ -29,7 +29,7 @@ public class ServletControlador extends HttpServlet {
         sesion.setAttribute("rectangulo", rectangulo); // Se comparte el modelo
         
         // 4. Redireccionar a la vista seleccionada
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("vista/desplegarVariables.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("vistas/desplegarVariables.jsp");
         requestDispatcher.forward(request, response);
         
     }
