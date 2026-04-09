@@ -20,5 +20,21 @@
         <c:if test="${bandera}">
             La bandera es verdadera
         </c:if>
+        <br/>
+        
+        <!--Estructura switch con c:choose -->
+        <c:if test="${param.opcion != null}">
+            <c:choose>
+                <c:when test="${param.opcion == 1}">
+                    Opción 1 Seleccionada
+                </c:when>
+                <c:when test="${param.opcion == 2}">
+                    Opción 2 Seleccionada
+                </c:when>
+                <c:otherwise>
+                    Opción desconocida
+                </c:otherwise>
+            </c:choose>
+        </c:if>
     </body>
 </html>
