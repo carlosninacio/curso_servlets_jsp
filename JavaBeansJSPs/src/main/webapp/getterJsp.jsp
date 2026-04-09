@@ -1,17 +1,15 @@
-<%-- 
-    Document   : getterJsp
-    Created on : 8/04/2026, 7:36:46 p. m.
-    Author     : Nacho
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>JSP que lee los valores del JavaBean</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>JSP que lee los valores del JavaBean</h1>
+        <jsp:useBean id="rectangulo" class="beans.Rectangulo" scope="session"/>
+        <br/>
+        Valor base: <jsp:getProperty name="rectangulo" property="base"/>
+        <br/>
+        Valor altura: <jsp:getProperty name="rectangulo" property="altura"/>
     </body>
 </html>
