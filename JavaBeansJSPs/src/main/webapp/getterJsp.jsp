@@ -13,5 +13,7 @@
         Valor altura: <jsp:getProperty name="rectangulo" property="altura"/>
         <br/>
         Valor area: <jsp:getProperty name="rectangulo" property="area"/>
+        <br/>
+        <a href="index.jsp">Regresar al Inicio</a>
     </body>
 </html>
