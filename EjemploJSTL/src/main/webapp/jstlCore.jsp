@@ -36,5 +36,21 @@
                 </c:otherwise>
             </c:choose>
         </c:if>
+                    
+         <!--Iteración de un arreglo-->
+         <%
+           String[] nombres = {"Claudia", "Pedro", "Juan"};
+           request.setAttribute("nombres", nombres);
+         %>
+         
+         <br/>
+         <ul>
+             <c:forEach var="persona" items="${nombres}">
+                 <li>${persona}</li>
+             </c:forEach>
+         </ul>
+         
+         <br/>
+         <a href="index.jsp">Regresar al Inicio</a>
     </body>
 </html>
