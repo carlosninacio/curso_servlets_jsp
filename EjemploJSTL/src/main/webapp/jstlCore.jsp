@@ -14,5 +14,11 @@
         
         <!--Variable con código HTML-->
         <c:out value="<h4>Hola</h4>" escapeXml="false"/>
+        
+        <!--Código condicional con if-->
+        <c:set var="bandera" value="true"/>
+        <c:if test="${bandera}">
+            La bandera es verdadera
+        </c:if>
     </body>
 </html>
