@@ -17,7 +17,7 @@ public class ServletControlador extends HttpServlet {
             throws ServletException, IOException {
             
         // 1. Procesamiento de parámetros
-        // Por el momento no se va a procesar ningún parametro
+        String accion = request.getParameter("accion");
     
         // 2. Crrear los JavaBeans (clases de Modelo)
         Rectangulo rectangulo = new Rectangulo(3,6);
