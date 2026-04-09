@@ -11,5 +11,7 @@
         Valor base: <jsp:getProperty name="rectangulo" property="base"/>
         <br/>
         Valor altura: <jsp:getProperty name="rectangulo" property="altura"/>
+        <br/>
+        Valor area: <jsp:getProperty name="rectangulo" property="area"/>
     </body>
 </html>
