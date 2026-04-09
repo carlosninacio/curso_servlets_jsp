@@ -20,7 +20,9 @@ public class ServletControlador extends HttpServlet {
         String accion = request.getParameter("accion");
     
         // 2. Crrear los JavaBeans (clases de Modelo)
-        Rectangulo rectangulo = new Rectangulo(3,6);
+        Rectangulo rectanguloRequest = new Rectangulo(1,2);
+        Rectangulo rectanguloSession = new Rectangulo(3,4);
+        Rectangulo rectanguloApplication = new Rectangulo(5,6);
     
         // 3. Agregar el JavaBean a algún alcance (request, session, application)
         request.setAttribute("mensaje", "Saludos desde el Servlet");
