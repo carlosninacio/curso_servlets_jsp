@@ -5,7 +5,7 @@
     <artifactId>Ejemplo1MVC</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>Ejemplo1MVC</name>
+    <name>Ejemplo2MVC</name>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
