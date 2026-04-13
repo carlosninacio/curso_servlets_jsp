@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Pie pagina</h1>
-    </body>
-</html>
+<footer id="pie-pagina" class="bg-warning text-white mt-5 p-3">
+    <div class="container">
+        <p class="lead text-center">© CarlosRamirez.com</p>
+    </div>
+</footer>
