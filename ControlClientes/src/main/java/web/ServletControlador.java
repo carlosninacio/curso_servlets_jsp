@@ -50,7 +50,26 @@ public class ServletControlador extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        String accion = Optional.ofNullable(request.getParameter("accion")).orElse("listar");
+        switch (accion) {
+            case "insertar" -> this.insertarCliente(request, response);
+            default -> this.listarClientes(request, response);
+        }
     }
-
+    
+    private void insertarCliente(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Procesar datos del formulario
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
+        String email = request.getParameter("email");
+        String telefono = request.getParameter("telefono");
+        double saldo = Double.parseDouble(request.getParameter("saldo"));
+        
+        // Crear objeto de tipo cliente con la información
+        Cliente cliente = new Cliente(nombre,apellido,email,telefono,saldo);
+        new ClienteDAO().insertar(cliente);
+        // Listar los clientes
+        this.listarClientes(request, response);
+    }
 }
