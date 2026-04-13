@@ -29,6 +29,10 @@
                                            class="btn btn-secondary btn-sm">
                                             <i class="bi bi-pencil"></i> Editar
                                         </a>
+                                           <a href="${pageContext.request.contextPath}/ServletControlador?accion=eliminar&idCliente=${cliente.idCliente}"
+                                              class="btn btn-danger btn-sm">
+                                              <i class="bi bi-trash"></i> Eliminar
+                                        </a>
                                     </td>
                                 </tr>
                             </c:forEach>
