@@ -1,10 +1,3 @@
-<%-- 
-    Document   : cabecero
-    Created on : 13/04/2026, 4:33:33 p. m.
-    Author     : Nacho
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +5,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Cabecero</h1>
     </body>
 </html>

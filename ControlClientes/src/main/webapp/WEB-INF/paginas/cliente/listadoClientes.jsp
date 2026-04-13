@@ -5,6 +5,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Botones navegacion</h1>
+        <h1>Listado Clientes</h1>
     </body>
 </html>

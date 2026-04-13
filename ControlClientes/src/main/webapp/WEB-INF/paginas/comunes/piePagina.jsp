@@ -1,10 +1,3 @@
-<%-- 
-    Document   : piePagina
-    Created on : 13/04/2026, 4:34:19 p. m.
-    Author     : Nacho
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +5,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Pie pagina</h1>
     </body>
 </html>
