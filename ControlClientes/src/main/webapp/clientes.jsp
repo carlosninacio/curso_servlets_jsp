@@ -17,7 +17,7 @@
         <jsp:include page = "/WEB-INF/paginas/cliente/listadoClientes.jsp"/>
         
         <!--Modal agregar un cliente-->
-        
+        <jsp:include page = "/WEB-INF/paginas/cliente/agregarCliente.jsp"/>
         
         <!--Pie de Página-->
         <jsp:include page = "/WEB-INF/paginas/comunes/piePagina.jsp"/>
