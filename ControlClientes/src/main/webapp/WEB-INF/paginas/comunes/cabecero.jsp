@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Cabecero</h1>
-    </body>
-</html>
+<header id="main-header" class="py-2 bg-info text-white">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <h1><i class="bi bi-people-fill"></i> Control de Clientes</h1>
+        </div>
+    </div>
+</header>
