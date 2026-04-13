@@ -21,6 +21,7 @@ public class ServletControlador extends HttpServlet {
         String accion = Optional.ofNullable(request.getParameter("accion")).orElse("listar");
         switch (accion) {
             case "listar" -> this.listarClientes(request, response);
+            case "editar" -> this.editarCliente(request, response);
             default -> this.listarClientes(request, response);
         }
     }
