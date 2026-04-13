@@ -29,6 +29,11 @@
                         <input type="number" class="form-control" id="saldo" name="saldo" required step="any"/>
                     </div>
                 </div>
+                <!--Pie pagina de la ventana Modal-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
             </form>
             
         </div>
