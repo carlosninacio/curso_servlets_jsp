@@ -29,15 +29,35 @@
                                            class="btn btn-secondary btn-sm">
                                             <i class="bi bi-pencil"></i> Editar
                                         </a>
-                                           <a href="${pageContext.request.contextPath}/ServletControlador?accion=eliminar&idCliente=${cliente.idCliente}"
-                                              class="btn btn-danger btn-sm">
-                                              <i class="bi bi-trash"></i> Eliminar
+                                        <a href="${pageContext.request.contextPath}/ServletControlador?accion=eliminar&idCliente=${cliente.idCliente}"
+                                           class="btn btn-danger btn-sm">
+                                            <i class="bi bi-trash"></i> Eliminar
                                         </a>
                                     </td>
                                 </tr>
                             </c:forEach>
                         </tbody>
                     </table>
+                </div>
+            </div>
+            <!--Totales-->
+            <div class="col-md-3">
+                <div class="card text-center bg-danger text-white mb-3">
+                    <div class="card-body">
+                        <h3>Saldo Total</h3>
+                        <h4 class="display-6">
+                            <fmt:formatNumber value="${saldoTotal}" type="currency"/>
+                        </h4>
+                    </div>
+                </div>
+                        
+                <div class="card text-center bg-success text-white mb-3">
+                    <div class="card-body">
+                        <h3>Total Clientes</h3>
+                        <h4 class="display-6">
+                            <i class="bi bi-people"></i> ${totalClientes}
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>
