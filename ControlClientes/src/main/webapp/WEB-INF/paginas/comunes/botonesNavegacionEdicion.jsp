@@ -11,10 +11,10 @@
                     <i class='bi bi-check-lg'></i> Guardar Cliente
                 </button>
             </div>
-                    <div class='btn btn-danger btn-block w-100'>
-                        <a href='${pageContext.request.contextPath}/ServletControlador?accion=eliminar&idCliente=${cliente.idCliente}'
-                           class='btn btn-danger btn-block w-100'><i class='bi bi-trash'></i> Eliminar Cliente</a>
-                    </div>
+            <div class='btn btn-danger btn-block w-100 col-md-3'>
+                <a href='${pageContext.request.contextPath}/ServletControlador?accion=eliminar&idCliente=${cliente.idCliente}'
+                   class='btn btn-danger btn-block w-100'><i class='bi bi-trash'></i> Eliminar Cliente</a>
+            </div>
         </div>
     </div>
 </section>
