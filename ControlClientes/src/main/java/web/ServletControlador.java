@@ -47,6 +47,14 @@ public class ServletControlador extends HttpServlet {
 
           return clientes.stream().mapToDouble(Cliente::getSaldo).sum();
     }
+    
+    private void editarCliente (HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        int idCliente = Integer.parseInt(request.getParameter("idCliente"));
+        Cliente cliente = new ClienteDAO().encontrarCliente(new Cliente(idCliente));
+        request.setAttribute("cliente", cliente);
+        String jspEditar = "/WEB-INF/paginas/cliente/editarCliente.jsp";
+        request.getRequestDispatcher(jspEditar).forward(request, response);
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

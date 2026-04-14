@@ -10,6 +10,7 @@ public class ClienteDAO {
     
     private static final String SQL_SELECT = "SELECT id_cliente, nombre, apellido, email, telefono, saldo FROM clientes";
     private static final String SQL_INSERT = "INSERT INTO clientes(nombre, apellido, email, telefono, saldo) VALUES(?, ?, ?, ?, ?)";
+    private static final String SQL_SELECT_BY_ID ="SELECT id_cliente, nombre, apellido, telefono, saldo FROM clientes WHERE id_cliente = ?"; 
     
     public List<Cliente> listar() {
         List<Cliente> clientes = new ArrayList<>();
@@ -49,6 +50,25 @@ public class ClienteDAO {
             ex.printStackTrace(System.out);
         }
         return rows;
+    }
+    
+    public Cliente encontrarCliente(Cliente cliente) {
+        try(Connection conn = Conexion.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(SQL_SELECT_BY_ID)) {
+            stmt.setInt(1, cliente.getIdCliente());
+            try (ResultSet rs = stmt.executeQuery()) {
+                if(rs.next()) {
+                    cliente.setNombre(rs.getString("nombre"));
+                    cliente.setApellido(rs.getString("apellido"));
+                    cliente.setEmail(rs.getString("email"));
+                    cliente.setTelefono(rs.getString("telefono"));
+                    cliente.setSaldo(rs.getDouble("saldo"));
+                }
+            }
+        } catch (SQLException ex) {
+           ex.printStackTrace(System.out);
+        }
+        return cliente;
     }
     
 }
