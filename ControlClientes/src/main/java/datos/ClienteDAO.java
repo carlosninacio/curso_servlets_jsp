@@ -12,6 +12,7 @@ public class ClienteDAO {
     private static final String SQL_INSERT = "INSERT INTO clientes(nombre, apellido, email, telefono, saldo) VALUES(?, ?, ?, ?, ?)";
     private static final String SQL_SELECT_BY_ID ="SELECT id_cliente, nombre, apellido, telefono, saldo FROM clientes WHERE id_cliente = ?";
     private static final String SQL_UPDATE = "UPDATE clientes set nombre = ?, apellido = ?, email = ?, telefono = ?, saldo = ? WHERE id_cliente = ?";
+    private static final String SQL_DELETE = "DELETE FROM clientes WHERE id_cliente = ?";
     
     public List<Cliente> listar() {
         List<Cliente> clientes = new ArrayList<>();
@@ -82,6 +83,19 @@ public class ClienteDAO {
             stmt.setString(4, cliente.getTelefono());
             stmt.setDouble(5, cliente.getSaldo());
             stmt.setInt(6, cliente.getIdCliente());
+            
+            rows = stmt.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        }
+        return rows;
+    }
+    
+    public int eliminar(Cliente cliente) {
+        int rows = 0;
+        try(Connection conn = Conexion.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(SQL_DELETE)) {
+            stmt.setInt(1, cliente.getIdCliente());
             
             rows = stmt.executeUpdate();
         } catch (SQLException ex) {

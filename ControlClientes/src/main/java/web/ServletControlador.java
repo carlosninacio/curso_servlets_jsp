@@ -22,6 +22,7 @@ public class ServletControlador extends HttpServlet {
         switch (accion) {
             case "listar" -> this.listarClientes(request, response);
             case "editar" -> this.editarCliente(request, response);
+            case "eliminar" -> this.eliminarCliente(request, response);
             default -> this.listarClientes(request, response);
         }
     }
@@ -54,6 +55,12 @@ public class ServletControlador extends HttpServlet {
         request.setAttribute("cliente", cliente);
         String jspEditar = "/WEB-INF/paginas/cliente/editarCliente.jsp";
         request.getRequestDispatcher(jspEditar).forward(request, response);
+    }
+    
+    private void eliminarCliente (HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        int idCliente = Integer.parseInt(request.getParameter("idCliente"));
+        new ClienteDAO().eliminar(new Cliente(idCliente));
+        this.listarClientes(request, response);
     }
 
     @Override
