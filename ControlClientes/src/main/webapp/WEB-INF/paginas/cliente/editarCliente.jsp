@@ -14,8 +14,7 @@
         <jsp:include page="/WEB-INF/paginas/comunes/cabecero.jsp"/>
 
         <!--Formulario de edicion de un cliente-->
-        <form action="${pageContext.request.contextPath}
-              /ServletControlador?accion=modificar&idCliente=${cliente.idCliente}"
+        <form action="${pageContext.request.contextPath}/ServletControlador?accion=modificar&idCliente=${cliente.idCliente}"
               method="POST" class="was-validated">
 
             <!--Botones de navegacion de edicion-->

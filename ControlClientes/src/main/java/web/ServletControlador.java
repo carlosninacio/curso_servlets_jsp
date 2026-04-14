@@ -62,6 +62,7 @@ public class ServletControlador extends HttpServlet {
         String accion = Optional.ofNullable(request.getParameter("accion")).orElse("listar");
         switch (accion) {
             case "insertar" -> this.insertarCliente(request, response);
+            case "modificar" -> this.modificarCliente(request, response);
             default -> this.listarClientes(request, response);
         }
     }
@@ -79,6 +80,21 @@ public class ServletControlador extends HttpServlet {
         Cliente cliente = new Cliente(nombre,apellido,email,telefono,saldo);
         new ClienteDAO().insertar(cliente);
         // Listar los clientes
+        this.listarClientes(request, response);
+    }
+    
+    private void modificarCliente(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        int idCliente = Integer.parseInt(request.getParameter("idCliente"));
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
+        String email = request.getParameter("email");
+        String telefono = request.getParameter("telefono");
+        double saldo = Double.parseDouble(request.getParameter("saldo"));
+        
+        Cliente cliente = new Cliente(idCliente, nombre, apellido, email, telefono, saldo);
+        new ClienteDAO().actualizar(cliente);
+        // Redirigir al caso de listar
         this.listarClientes(request, response);
     }
 }

@@ -10,7 +10,8 @@ public class ClienteDAO {
     
     private static final String SQL_SELECT = "SELECT id_cliente, nombre, apellido, email, telefono, saldo FROM clientes";
     private static final String SQL_INSERT = "INSERT INTO clientes(nombre, apellido, email, telefono, saldo) VALUES(?, ?, ?, ?, ?)";
-    private static final String SQL_SELECT_BY_ID ="SELECT id_cliente, nombre, apellido, telefono, saldo FROM clientes WHERE id_cliente = ?"; 
+    private static final String SQL_SELECT_BY_ID ="SELECT id_cliente, nombre, apellido, telefono, saldo FROM clientes WHERE id_cliente = ?";
+    private static final String SQL_UPDATE = "UPDATE clientes set nombre = ?, apellido = ?, email = ?, telefono = ?, saldo = ? WHERE id_cliente = ?";
     
     public List<Cliente> listar() {
         List<Cliente> clientes = new ArrayList<>();
@@ -69,6 +70,24 @@ public class ClienteDAO {
            ex.printStackTrace(System.out);
         }
         return cliente;
+    }
+    
+    public int actualizar(Cliente cliente) {
+        int rows = 0;
+        try(Connection conn = Conexion.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(SQL_UPDATE)) {
+            stmt.setString(1, cliente.getNombre());
+            stmt.setString(2, cliente.getApellido());
+            stmt.setString(3, cliente.getEmail());
+            stmt.setString(4, cliente.getTelefono());
+            stmt.setDouble(5, cliente.getSaldo());
+            stmt.setInt(6, cliente.getIdCliente());
+            
+            rows = stmt.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        }
+        return rows;
     }
     
 }
